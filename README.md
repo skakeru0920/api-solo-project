@@ -11,6 +11,6 @@ edit .env.local
 
 
 # set up database
-echo "CREATE DATABASE my_motorbike;" | psql
+echo "CREATE DATABASE my_motorcycle;" | psql
 
-psql -d my_motorbike(psqlのmy_motorbikeにアクセス)
+psql -d my_motorcycle(psqlのmy_motorcycleにアクセス)
