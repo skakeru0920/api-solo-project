@@ -1,0 +1,34 @@
+{
+  "name": "api-solo-priject",
+  "version": "1.0.0",
+  "description": "This was created during my time as a student at Code Chrysalis.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "test": "mocha --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skakeru0920/api-solo-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skakeru0920/api-solo-project/issues"
+  },
+  "homepage": "https://github.com/skakeru0920/api-solo-project#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "eslint": "^8.22.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19"
+  }
+}
