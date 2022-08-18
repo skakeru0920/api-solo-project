@@ -1,4 +1,6 @@
-<h1>motorcycles List</h1>
+<h1>登録バイクの一覧</h1>
+<a href="/motorcycle/new"><button>新しくバイクを追加する</button></a>
+<p></p>
 <table cellspacing="0">
 	<thread>
 		<th scope="col">id</th>
@@ -19,10 +21,22 @@
 			<td><%= motorcycles.cycle_maker_name%></td>
 			<td><%= motorcycles.cycle_sell_price%></td>
 			<td><%= motorcycles.cycle_displacement%></td>
-			<td><a href="/motorcycle/edit/<%= motorcycles.cycle_id %>">Edit</a></td>
-			<td><a href="/motorcycle/view/<%= motorcycles.cycle_id %>"> View</a></td>
+			<td><a href="/motorcycle/edit/<%= motorcycles.cycle_id %>">編集</a></td>
+			<td><a href="/motorcycle/view/<%= motorcycles.cycle_id %>"> ギャラリー</a></td>
 		</tr>
 		<% }); %>
 	</tbody>
 </table>
-<a href="/motorcycle/new">new motorcycle</a>
+<style>
+	td,
+	th {
+		border: 1px solid;
+		padding: 0.5em 1em;
+	}
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin: 0.5em 0 1em 0;
+	}
+</style>

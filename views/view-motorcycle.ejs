@@ -1,5 +1,6 @@
-<h1>VIEW <%= motorcycle.name %></h1>
-<p>img表示</p>
+<h1><%= motorcycle.cycle_name %></h1>
+<p>イメージ写真</p>
+<%- motorcycle.cycle_picture %>
 
 <form action="/motorcycle/delete/<%= motorcycle.cycle_id %>" method="post">
 	<input type="hidden" name="id" value="<%= motorcycle.cycle_id %>" />

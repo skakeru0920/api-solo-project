@@ -1,8 +1,12 @@
 <h1><%= type %> motorcycle Form</h1>
 <% if (motorcycle.cycle_id) { %>
-<form action="/motorcycle/edit/<%= motorcycle.cycle_id %>/save" method="post">
+<form
+	action="/motorcycle/edit/<%= motorcycle.cycle_id %>/save"
+	method="post"
+	style="display: table-caption"
+>
 	<% } else { %>
-	<form action="/motorcycle/post" method="post">
+	<form action="/motorcycle/post" method="post" style="display: table-caption">
 		<% } %>
 		<input type="hidden" name="id" value="<%= motorcycle.cycle_id %>" />
 		<label for="cycleName">車名</label>
@@ -48,5 +52,18 @@
 			value="<%= motorcycle.cycle_picture %> "
 		/>
 		<button type="submit">送信</button>
-
+	</form>
+	<style>
+		td,
+		th {
+			border: 1px solid;
+			padding: 0.5em 1em;
+		}
+		dt {
+			font-weight: bold;
+		}
+		dd {
+			margin: 0.5em 0 1em 0;
+		}
+	</style>
 </form>

@@ -1,8 +1,12 @@
 <h1><%= type %> maker Form</h1>
 <% if (maker.id) { %>
-<form action="/makers/edit/<%= maker?.id %>/save" method="post">
+<form
+	action="/makers/edit/<%= maker?.id %>/save"
+	method="post"
+	style="display: table-caption"
+>
 	<% } else { %>
-	<form action="/makers/post" method="post">
+	<form action="/makers/post" method="post" style="display: table-caption">
 		<% } %>
 		<input type="hidden" name="id" value="<%= maker?.id %>" />
 		<label for="makerName">Maker Name</label>
@@ -22,3 +26,16 @@
 		<button type="submit">送信</button>
 	</form>
 </form>
+<style>
+	td,
+	th {
+		border: 1px solid;
+		padding: 0.5em 1em;
+	}
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin: 0.5em 0 1em 0;
+	}
+</style>

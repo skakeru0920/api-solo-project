@@ -1,9 +1,11 @@
-<h1>makers List</h1>
+<h1>登録メーカーリスト</h1>
+<a href="/makers/new"><button>新しくメーカーを追加する</button></a>
+<p></p>
 <table cellspacing="0">
 	<thread>
 		<th scope="col">id</th>
-		<th scope="col">maker</th>
-		<th scope="col">location</th>
+		<th scope="col">メーカー名</th>
+		<th scope="col">所在地</th>
 		<th></th>
 		<th></th>
 	</thread>
@@ -13,10 +15,24 @@
 			<td><%= maker.maker_id %></td>
 			<td><%= maker.maker_name %></td>
 			<td><%= maker.maker_location %></td>
-			<td><a href="/makers/edit/<%= maker.maker_id %>">Edit</a></td>
-			<td><a href="/makers/view/<%= maker.maker_id %>"> View</a></td>
+			<td><a href="/makers/edit/<%= maker.maker_id %>">編集</a></td>
+			<td>
+				<a href="/makers/view/<%= maker.maker_id %>"> バイク一覧</a>
+			</td>
 		</tr>
 		<% }); %>
 	</tbody>
 </table>
-<a href="/makers/new">new makers</a>
+<style>
+	td,
+	th {
+		border: 1px solid;
+		padding: 0.5em 1em;
+	}
+	dt {
+		font-weight: bold;
+	}
+	dd {
+		margin: 0.5em 0 1em 0;
+	}
+</style>
