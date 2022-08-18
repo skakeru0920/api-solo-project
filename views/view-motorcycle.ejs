@@ -1,0 +1,7 @@
+<h1>VIEW <%= motorcycle.name %></h1>
+<p>img表示</p>
+
+<form action="/motorcycle/delete/<%= motorcycle.cycle_id %>" method="post">
+	<input type="hidden" name="id" value="<%= motorcycle.cycle_id %>" />
+	<button type="submit">Delete motorcycle</button>
+</form>

@@ -1,0 +1,52 @@
+<h1><%= type %> motorcycle Form</h1>
+<% if (motorcycle.cycle_id) { %>
+<form action="/motorcycle/edit/<%= motorcycle.cycle_id %>/save" method="post">
+	<% } else { %>
+	<form action="/motorcycle/post" method="post">
+		<% } %>
+		<input type="hidden" name="id" value="<%= motorcycle.cycle_id %>" />
+		<label for="cycleName">車名</label>
+		<input
+			id="cycleName"
+			name="cycleName"
+			type="text"
+			value="<%= motorcycle?.cycle_name %> "
+		/>
+		<label for="makerName">メーカー名</label>
+		<input
+			id="makerName"
+			name="makerName"
+			type="text"
+			value="<%= motorcycle?.cycle_maker_name %> "
+		/>
+		<label for="cycleSellPrice">販売価格</label>
+		<input
+			id="cycleSellPrice"
+			name="cycleSellPrice"
+			type="text"
+			value="<%= motorcycle?.cycle_sell_price %> "
+		/>
+		<label for="cycleDisplacement">排気量</label>
+		<input
+			id="cycleDisplacement"
+			name="cycleDisplacement"
+			type="text"
+			value="<%= motorcycle?.cycle_displacement %> "
+		/>
+		<label for="cycleUrl">リンク先</label>
+		<input
+			id="cycleUrl"
+			name="cycleUrl"
+			type="text"
+			value="<%= motorcycle?.cycle_url %> "
+		/>
+		<label for="cyclePicture">写真（imgタグ)</label>
+		<input
+			id="cyclePicture"
+			name="cyclePicture"
+			type="text"
+			value="<%= motorcycle.cycle_picture %> "
+		/>
+		<button type="submit">送信</button>
+
+</form>
