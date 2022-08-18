@@ -1,0 +1,21 @@
+<h1>makers List</h1>
+<table cellspacing="0">
+	<thread>
+		<th scope="col">id</th>
+		<th scope="col">maker</th>
+		<th scope="col">location</th>
+		<th></th>
+		<th></th>
+	</thread>
+	<tbody>
+		<% makers.forEach(maker => { %>
+		<tr>
+			<td><%= maker.maker_id %></td>
+			<td><%= maker.maker_name %></td>
+			<td><%= maker.maker_location %></td>
+			<td><a href="/makers/edit/<%= maker.maker_id %>">Edit</a></td>
+			<td><a href="/makers/view/<%= maker.maker_id %>"> View</a></td>
+		</tr>
+		<% }); %>
+	</tbody>
+</table>

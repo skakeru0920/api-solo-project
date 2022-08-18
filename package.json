@@ -22,6 +22,7 @@
   "homepage": "https://github.com/skakeru0920/api-solo-project#readme",
   "dependencies": {
     "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "knex": "^2.2.0",
     "pg": "^8.7.3"
