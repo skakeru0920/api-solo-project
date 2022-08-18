@@ -1,0 +1,24 @@
+<h1><%= type %> maker Form</h1>
+<% if (maker.id) { %>
+<form action="/makers/edit/<%= maker?.id %>/save" method="post">
+	<% } else { %>
+	<form action="/makers/post" method="post">
+		<% } %>
+		<input type="hidden" name="id" value="<%= maker?.id %>" />
+		<label for="makerName">Maker Name</label>
+		<input
+			id="makerName"
+			name="makerName"
+			type="text"
+			value="<%= maker?.maker %> "
+		/>
+		<label for="makerLocation">Maker Location</label>
+		<input
+			id="makerLocation"
+			name="makerLocation"
+			type="text"
+			value="<%= maker?.location %> "
+		/>
+		<button type="submit">送信</button>
+	</form>
+</form>
